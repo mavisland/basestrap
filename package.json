@@ -20,5 +20,8 @@
   "homepage": "https://github.com/basestrap/basestrap#readme",
   "bugs": {
     "url": "https://github.com/basestrap/basestrap/issues"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
