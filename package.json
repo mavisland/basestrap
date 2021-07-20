@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Lightweight, fast and functional CSS framework",
   "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/basestrap/basestrap.git"
