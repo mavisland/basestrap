@@ -1,0 +1,24 @@
+{
+  "name": "basestrap",
+  "version": "0.0.1",
+  "description": "Lightweight, fast and functional CSS framework",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basestrap/basestrap.git"
+  },
+  "keywords": [
+    "css",
+    "css-framework",
+    "lightweight",
+    "semantic",
+    "minimal",
+    "dark-mode"
+  ],
+  "author": "Tanju Yıldız <ben@tanjuyildiz.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/basestrap/basestrap#readme",
+  "bugs": {
+    "url": "https://github.com/basestrap/basestrap/issues"
+  }
+}
