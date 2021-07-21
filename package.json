@@ -27,6 +27,7 @@
   "devDependencies": {
     "autoprefixer": "^10.3.1",
     "browser-sync": "^2.27.4",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-filter": "^7.0.0",
@@ -35,9 +36,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "node-sass": "^6.0.1",
+    "normalize.css": "^8.0.1",
     "postcss": "^8.3.5"
-  },
-  "peerDependencies": {
-    "normalize.css": "^8.0.1"
   }
 }
