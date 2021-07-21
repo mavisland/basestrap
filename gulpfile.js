@@ -1,8 +1,9 @@
 /*! basestrap */
 
 // Packages
-const { src, dest } = require("gulp");
+const { src, dest, series, watch } = require("gulp");
 const autoprefixer = require("autoprefixer");
+const browserSync = require("browser-sync").create();
 const cleanCSS = require("gulp-clean-css");
 const filter = require("gulp-filter");
 const postcss = require("gulp-postcss");
@@ -45,8 +46,33 @@ function buildStyles() {
     .pipe(dest("./dist"));
 }
 
+// Watch for changes to the source directory
+const serveDocs = (cb) => {
+  browserSync.init({
+    server: {
+      baseDir: "docs/",
+    },
+  });
+  cb();
+};
+
+// Reload the browser when files change
+const reloadBrowser = (cb) => {
+  browserSync.reload();
+  cb();
+};
+
+// Watch all file changes
+const watchSource = () => {
+  watch("./scss/basestrap.scss", series(buildStyles, reloadBrowser));
+  watch("./docs/index.html", reloadBrowser);
+};
+
 // Build task
 exports.build = buildStyles;
 
+// Watch Task
+exports.watch = watchSource;
+
 // Default task
-exports.default = this.build;
+exports.default = series(this.build, serveDocs, watchSource);
