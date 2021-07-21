@@ -50,7 +50,7 @@ function buildStyles() {
 const serveDocs = (cb) => {
   browserSync.init({
     server: {
-      baseDir: "docs/",
+      baseDir: "./",
     },
   });
   cb();
