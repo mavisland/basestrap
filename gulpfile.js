@@ -17,8 +17,8 @@ function buildStyles() {
     .pipe(sourcemaps.init())
     .pipe(
       sass({
+        includePaths: "./node_modules",
         outputStyle: "expanded",
-        sourceMap: true,
       }).on("error", function (err) {
         sass.logError(err);
         this.emit("end");
