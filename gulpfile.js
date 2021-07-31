@@ -71,7 +71,7 @@ const reloadBrowser = (cb) => {
 
 // Watch all file changes
 const watchSource = () => {
-  watch("./scss/basestrap.scss", series(buildStyles, reloadBrowser));
+  watch("./scss/**/*.scss", series(buildStyles, reloadBrowser));
   watch("./index.html", reloadBrowser);
 };
 
