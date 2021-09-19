@@ -1,0 +1,77 @@
+//** Generic
+
+%heading {
+  color: $headings-color;
+  font-family: $headings-font-family;
+  font-style: $headings-font-style;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  margin-top: 0;
+  margin-bottom: $headings-margin-bottom;
+}
+
+h1 {
+  @extend %heading;
+  font-size: $h1-font-size;
+}
+h2 {
+  @extend %heading;
+  font-size: $h2-font-size;
+}
+h3 {
+  @extend %heading;
+  font-size: $h3-font-size;
+}
+h4 {
+  @extend %heading;
+  font-size: $h4-font-size;
+}
+h5 {
+  @extend %heading;
+  font-size: $h5-font-size;
+}
+h6 {
+  @extend %heading;
+  font-size: $h6-font-size;
+}
+
+// Paragraphs
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Blockquotes
+blockquote {
+  background-color: $blockquote-bg;
+  border-left: $blockquote-border-width solid $blockquote-border-color;
+  color: $blockquote-color;
+  margin: 0 0 $blockquote-margin-bottom;
+  padding: $blockquote-padding-y $blockquote-padding-x;
+}
+
+// Lists
+%lists {
+  margin: 0 0 $lists-margin-bottom;
+}
+
+// Definition Lists
+dl {
+  @extend %lists;
+}
+dt {
+  font-weight: $font-weight-bold;
+}
+dd {
+  margin-bottom: 0.5rem;
+}
+
+// Ordered Lists
+ol {
+  @extend %lists;
+}
+
+// Unordered Lists
+ul {
+  @extend %lists;
+}
